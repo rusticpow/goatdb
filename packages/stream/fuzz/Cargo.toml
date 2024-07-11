@@ -1,0 +1,29 @@
+[package]
+name = "stream-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+tempfile = "3.10.1"
+
+[dependencies.stream]
+path = ".."
+
+[[bin]]
+name = "memory_fuzz"
+path = "fuzz_targets/memory_fuzz.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "file_fuzz"
+path = "fuzz_targets/file_fuzz.rs"
+test = false
+doc = false
+bench = false

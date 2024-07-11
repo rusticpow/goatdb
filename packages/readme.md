@@ -1,0 +1,1 @@
+A package is a general usage library that doesn't depend on the specificity of Database implementation. The package should be abstract and provide api like traits to be able to used by other packages or db.
